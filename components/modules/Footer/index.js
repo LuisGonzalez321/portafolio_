@@ -1,22 +1,30 @@
 const index = () => {
   return (
     <footer className="footer">
-      <div className="content has-text-centered">
-        <p>
-          <span>
-            <i class="fab fa-facebook-f"></i>
-          </span>
-          <span>
-            <i class="fab fa-github"></i>
-          </span>
-          <span>
-            <i class="fab fa-twitter"></i>
-          </span>
-          <span>
-            <i class="fab fa-instagram"></i>
-          </span>
-        </p>
-        <p>
+      <div className="content has-text-centered mx-6">
+        <div className="container">
+          <a href="https://www.facebook.com/luisgabriel.gonzales.33/" target="_blank">
+            <span>
+              <i className="fab fa-facebook-f" />
+            </span>
+          </a>
+          <a href="https://github.com/LuisGonzalez321" target="_blank">
+            <span>
+              <i className="fab fa-github" />
+            </span>
+          </a>
+          <a href="https://twitter.com/LuisGab83219242" target="_blank">
+            <span>
+              <i className="fab fa-twitter" />
+            </span>
+          </a>
+          <a href="https://www.instagram.com/lgabrielgonzaleslopez.lggl/" target="_blank">
+            <span>
+              <i className="fab fa-instagram" />
+            </span>
+          </a>
+        </div>
+        <p className="title is-size-5 mt-6">
           Copyright (c) 2021 Todos los derechos reservados.
         </p>
       </div>

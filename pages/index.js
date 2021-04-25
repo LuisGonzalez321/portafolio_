@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 
 //Components
-import Navbar from '../components/modules/Navbar';
-import Footer from '../components/modules/Footer';
+import Navbar from "../components/modules/Navbar";
+import Footer from "../components/modules/Footer";
 
 export default function IndexPage() {
   return (
@@ -36,10 +36,20 @@ const Main1 = () => {
                 <p className="title has-text-left">
                   Hola, soy Luis Gonzalez <br /> Desarrollador web jr.{" "}
                 </p>
+                <p className="subtitle has-text-left mt-4">
+                  Hola bienvenido, soy un joven siempre dispuesto a aprender y
+                  siempre dispuesto a enseñar. Unos de los temas que me fascinan
+                  son las matemáticas, física y la programación.
+                </p>
+                <div className="is-flex is-justify-content-flex-start">
+                  <Link href="/lista-proyectos">
+                    <a href="/lista-proyectos" className="button is-primary">
+                      Ver proyectos
+                    </a>
+                  </Link>
+                </div>
               </div>
-              <div className="column">
-                
-              </div>
+              <div className="column"></div>
             </div>
           </div>
         </div>
