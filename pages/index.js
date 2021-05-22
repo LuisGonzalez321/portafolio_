@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -66,17 +67,20 @@ const Main2 = () => {
   const [data, useData] = useState([]);
  
   useEffect(() => {
-    fetch('https://admin-portafolio.herokuapp.com/areas')
-      .then((res) => console.log(res.json()))
-      .catch((err) => {});
-  });
+    axios.get('https://admin-portafolio.herokuapp.com/areas',)
+        .then((res)=>{
+            useData(res.data);
+            console.log(res.data)
+        })
+        .catch(()=>{});
+  }, []);
 
   return (
     <section className="section">
       <h2 className="title is-size-2 has-text-centered">
         TECNOLOGIAS CON LAS QUE TRABAJO
       </h2>
-      <Cardtechno area="Front-end" listElement={[]} />
+      <Cardtechno listElement={data} />
     </section>
   );
 };
