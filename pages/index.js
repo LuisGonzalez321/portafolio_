@@ -1,9 +1,11 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
 //Components
 import Navbar from "../components/modules/Navbar";
 import Footer from "../components/modules/Footer";
+import Cardtechno from "../components/elements/Cardtechno";
 
 export default function IndexPage() {
   return (
@@ -14,6 +16,7 @@ export default function IndexPage() {
       </Head>
       <main>
         <Main1 />
+        <Main2 />
       </main>
       <Footer />
     </div>
@@ -54,6 +57,26 @@ const Main1 = () => {
           </div>
         </div>
       </div>
+    </section>
+  );
+};
+
+const Main2 = () => {
+
+  const [data, useData] = useState([]);
+ 
+  useEffect(() => {
+    fetch('https://admin-portafolio.herokuapp.com/areas')
+      .then((res) => console.log(res.json()))
+      .catch((err) => {});
+  });
+
+  return (
+    <section className="section">
+      <h2 className="title is-size-2 has-text-centered">
+        TECNOLOGIAS CON LAS QUE TRABAJO
+      </h2>
+      <Cardtechno area="Front-end" listElement={[]} />
     </section>
   );
 };

@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Router from 'next/router'
 
 const index = () => {
+
   useEffect(() => {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(
@@ -31,11 +33,11 @@ const index = () => {
           <Link href="/">
             <a className="navbar-item" href="/">
               <Image
-                src="/Assets/img/logo.png"
-                alt="Logo"
-                layout={"fixed"}
-                width={100}
-                height={100}
+                  src="/Assets/img/logo.png"
+                  alt="Logo"
+                  layout={"fixed"}
+                  width={100}
+                  height={100}
               />
             </a>
           </Link>
@@ -48,7 +50,7 @@ const index = () => {
         <div id="navbarMenuHeroA" className="navbar-menu">
           <div className="navbar-end">
             <Link href="/">
-              <a className="navbar-item is-active">Inicio</a>
+              <a className="navbar-item">Inicio</a>
             </Link>
             <Link href="/blog">
               <a className="navbar-item">Blog</a>
