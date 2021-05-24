@@ -1,14 +1,14 @@
 @import './components/modules/Navbar/style.module.scss';
 
+.section-main-1{
+  height: 100vh;
+}
 
 .footer {
   .content {
     .container {
-    
-      display: flex;
-      justify-content: space-between;
-
       span{
+        margin: auto 1em;
         font-size: 2em;
         color: rgb(53, 53, 53);
         &:hover {

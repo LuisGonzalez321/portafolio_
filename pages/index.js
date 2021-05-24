@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import Image from 'next/image';
 
 //Components
 import Navbar from "../components/modules/Navbar";
@@ -15,6 +16,9 @@ export default function IndexPage() {
         <title>Portafolio - Luis Gabriel Gonzalez Lopez</title>
         <meta name="description" content="" />
       </Head>
+        <header>
+            <Navbar />
+        </header>
       <main>
         <Main1 />
         <Main2 />
@@ -26,11 +30,8 @@ export default function IndexPage() {
 
 const Main1 = () => {
   return (
-    <section className="hero is-medium">
+    <section className="section section-main-1">
       {/* Hero head: will stick at the top */}
-      <div className="hero-head">
-        <Navbar />
-      </div>
       {/* Hero content: will be in the middle */}
       <div className="hero-body">
         <div className="container has-text-centered">
@@ -53,7 +54,9 @@ const Main1 = () => {
                   </Link>
                 </div>
               </div>
-              <div className="column"></div>
+              <div className="column">
+
+              </div>
             </div>
           </div>
         </div>
